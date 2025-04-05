@@ -1,30 +1,31 @@
 # GitKraKen-Crack
-GitKraKen8.2.0-9.x的破解使用
+Works with the latest GitKraken (V11)
 
-## 破解要求环境
-- Node.js Version>=12 LTS
+## Needed
+- Node.js v16 or newer
 - yarn
-- GitKraKen v8.2.0-9.x
+- GitKraKen v8.2.0 or newer
 
-## gitkraken下载地址
+## GitKraken Download Link
 [gitkraken](https://www.gitkraken.com/git-client/try-free)
 
-## 破解步骤
+## Crack Steps
 
-下载之后需要先运行安装下载的GitKraken（它会自动安装到AppData/Local/gitkraken9.x中）。安装完毕后将会自动打开gitkraken，此时直接将其关闭即可。
-### 2.从npm安装yarn
+### 1. Install Node, Gitkraken and Yarn
 - npm install --global yarn
-### 3.git clone https://github.com/qsshs/GitKraKen-Crack.git
+
+### 2. Clone this repo and run the Crack
+- git clone https://github.com/qsshs/GitKraKen-Crack.git
 - cd GitKraKen-Crack
 - yarn install
 - yarn build
 - yarn gitcracken patcher
 
+## Follow-up
+### Block Updates
+Add the following line at the bottom of the hosts file located at `C:\Windows\System32\drivers\etc`:
+`127.0.0.1 release.gitkraken.com`
+> Alternatively, you can delete the `update.exe` file in the `AppData/Local/gitkraken` directory to also prevent GitKraken from auto-updating.
 
-## 后续
-### 屏蔽更新
-在C:\Windows\System32\drivers\etc下的hosts文件中最下面添加一行`127.0.0.1 release.gitkraken.com`即可。
-> 或者，直接在AppData/Local/gitkraken目录下，将update.exe删掉，也可禁止gitkraken自动更新。  
-
-### 从软件本体启动而不是update或安装包
-在AppData/Local/gitkraken/app-9.x/目录下的gitkraken.exe才是真正的客户端本体。  
+### Launch from the actual software, not from the updater or installer
+The real client executable is located at `AppData/Local/gitkraken/app-x/gitkraken.exe`.
